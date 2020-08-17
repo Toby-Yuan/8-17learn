@@ -62,3 +62,30 @@ php2.php
     define("PI",3.1415926);
     echo PI, "<br>";
 ?>
+
+// gettype : 查詢變數型態(integer, double, string, boolean)
+$x = 12;
+echo gettype($x);
+--> integer
+
+// integer : php會自動轉換不同的進位法, 並且會盡量轉換和運算
+$x = 010; //8進位 --> 8
+$y = 0xa; //16進位 --> 10
+$z = 2; //10進位
+print $x+$y+$z;
+--> 20
+
+// string可以比大小, 一個一個比較, 贏了就不比了, 但是數字不一樣
+"ABC" >= "AB"
+"ABC" < "BA"
+"123" >= "12"
+"123" >= "21"
+
+// time
+$x = getdate();
+echo gettype($x);
+--> array 是陣列
+
+$y = date('Y-m-d H:i:s');
+echo gettype($y);
+--> string 是字串
