@@ -58,7 +58,7 @@ php1.php
 
 php2.php
 <?php
-    // defined : 定義常數
-    defined("PI",3.1415926);
+    // define : 定義常數
+    define("PI",3.1415926);
     echo PI, "<br>";
 ?>
