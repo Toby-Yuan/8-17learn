@@ -189,7 +189,8 @@ function foo(){
 foo();
 --> 成功
 
-point : php不管是父層還是子層都互相讀不到, 除非加上global, 當外面都有的時候就代表宣告全域變數
+point : php不管是父層還是子層都互相讀不到, 除非加上global, 
+    當外面都有的時候就代表宣告全域變數, 其他部分要宣告global才能使用
 function foo(){
     global $x;
     echo $x;
