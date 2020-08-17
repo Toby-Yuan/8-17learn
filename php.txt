@@ -101,3 +101,18 @@ echo gettype($y);
 大約450多的地方有error_reporting = E_ALL
 改成: error_reporting = E_COMPILE_ERROR|E_RECOVERABLE_ERROR|E_ERROR|E_CORE_ERROR
 470多display_errors = Off  -->  On
+
+// 運算元順序
+$x = 1;
+$y = $x++;
+--> $y = $x; $x++;
+--> $x = 2, $y = 1
+
+$x = 1;
+$y = ++$x;
+--> $x++; $y = $x;
+--> $x = 2, $y = 2
+
+// 運算元判斷式
+$a = 100;
+$b = ($a > 0) ? "positive" : "negative";
