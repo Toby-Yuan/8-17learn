@@ -172,3 +172,25 @@ function test($i) {
 $x = 2;
 $p = "test";
 echo $p($x);
+
+// 變數區域
+$x = 100;
+function foo(){
+    echo $X;
+}
+foo();
+--> 失敗
+
+function foo(){
+    if(isset($x)){
+        echo $x;
+    }
+}
+foo();
+--> 成功
+
+point : php不管是父層還是子層都互相讀不到, 除非加上global, 當外面都有的時候就代表宣告全域變數
+function foo(){
+    global $x;
+    echo $x;
+}
