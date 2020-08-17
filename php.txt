@@ -35,3 +35,30 @@ $name = $firstName . $lastNane;
 
 // 運算元
 and != &&, or != || : 前面的都是如果提前成立就會提前結束
+
+// 正式上課內容
+// 呼叫 php1呼叫php2 : 把php2的內容複製到php1
+notice : 盡量不要重新呼叫(變數回到原本的值 A呼叫B, B呼叫C == A呼叫C)
+
+php1.php
+<?php
+    include("php2.php");
+
+    // 系統偵測, 防止重複呼叫的問題出現
+    include_once("php2.php");
+
+    // 呼叫不存在的檔案不會有問題
+    include("php3.php");
+    -->Warning
+
+    // 如果是require就一定要有東西 
+    require("php3.php")
+    -->ERROR
+?>
+
+php2.php
+<?php
+    // defined : 定義常數
+    defined("PI",3.1415926);
+    echo PI, "<br>";
+?>
