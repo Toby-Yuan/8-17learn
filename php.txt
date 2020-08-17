@@ -94,3 +94,10 @@ echo gettype($x);
 $y = date('Y-m-d H:i:s');
 echo gettype($y);
 --> string 是字串
+
+// 取消顯示Warning
+先查詢: phpinfo();
+修改php.ini
+大約450多的地方有error_reporting = E_ALL
+改成: error_reporting = E_COMPILE_ERROR|E_RECOVERABLE_ERROR|E_ERROR|E_CORE_ERROR
+470多display_errors = Off  -->  On
