@@ -147,3 +147,28 @@ $x = 200;
 
 // 可以用迴圈, 但是變數都記得加$
 point : break只會跳一層(巢狀迴圈的情況下)
+
+// function
+function funcName () {
+    echo...;
+}
+funcName();
+
+point : 多載, php中function可以傳多個參數, 但是不能比原本設定的少
+function funcName (){
+    // func_get_args() : 把傳入的值變成陣列
+    $x = func_get_args();
+}
+funcName(a, b, c,...)
+
+$x[0] --> a
+$x[1] --> b
+$x[2] --> c
+
+// 可以用字串呼叫函式
+function test($i) {
+	return $i + 1;
+}
+$x = 2;
+$p = "test";
+echo $p($x);
