@@ -142,3 +142,8 @@ $x = 200;
 --> x : 200, y : 200;
 
 // unset : 清除
+
+// php也有if...else...和switch...case..., case最後加上break告知結束
+
+// 可以用迴圈, 但是變數都記得加$
+point : break只會跳一層(巢狀迴圈的情況下)
