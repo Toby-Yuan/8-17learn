@@ -1,0 +1,37 @@
+// 靜態與動態
+靜態: 由設計師來做手動更改
+動態: 有一個程式更改網頁內容
+
+point : 僅需把有變化的部分用<?php ?>包起來, 變數要$開頭, echo是回傳, 可以分兩區打會比較乾淨
+
+// 縮寫
+<?php echo $a ?>
+or
+<?= $a ?>
+
+// LAMP
+Linus + Apache + MySQL + PHP
+
+// 變數型態
+string字串 : $string="Hello" or 'Hello' (單引號比較好)
+number數字 : $number=4
+timestamp時間戳記 : $x=strtotime(gmdate('Y-m-d H:i:s'))
+Boolean布林值 : $yesOrNo=TRUE (0=FALSE, 1=TRUE)
+
+// 字串
+1.雙引號 "", 雙引號裡面的變數名稱會自動帶入變數的值
+echo "$a" 與 echo $a, 結果是一樣的
+2.單引號 ''
+echo '$a' 與 echo $a, 結果不一樣
+3.定界符號
+$s = <<<(自己取)
+Line1
+Line2
+(自己取)
+4.字串相連是用. 數字相加是+
+$firstName = "Jimmy";
+$lastNane = "Lian";
+$name = $firstName . $lastNane;
+
+// 運算元
+and != &&, or != || : 前面的都是如果提前成立就會提前結束
